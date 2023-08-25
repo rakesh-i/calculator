@@ -4,6 +4,7 @@ let res = "123+123";
 let a = [];
 let cur = "";
 function concat(e){
+    console.log(e,cur);
     if(e=='*'||e=='-'||e=='+'||e=='/'||e=='%'){
         if(cur=='*'||cur=='-'||cur=='+'||cur=='/'||cur=='%'){
             a.pop();
@@ -11,13 +12,14 @@ function concat(e){
             cur = e;
             disp.innerHTML = a.join("");
         }
-        else if(cur!=''){
+        else if(cur!==''){
             cur = e;
             a.push(e);
             disp.innerHTML = a.join("");
         }
     }
     else{
+        console.log('heasdf');
         cur = e;
         a.push(e);
         disp.innerHTML = a.join("");

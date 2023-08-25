@@ -1,5 +1,8 @@
 *{
-    outline: auto;
+    /* outline: 1px solid red; */
+}
+body{
+    background:#ededed;
 }
 .content{
     display: flex;
@@ -9,23 +12,40 @@
 }
 
 .frame{
-    width: 350px;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 600px;
     box-sizing: border-box;
-    flex:0;
+    background: black;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+
+}
+
+.display{
+    width: 300px;
+    flex: 1;
+    background: hsl(100, 0%, 10%);
+    border-radius: 30px;
 }
 
 .keys{
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
     box-sizing: border-box;
     background-color: black;
-    flex:0;
+    justify-content: space-evenly;
+    gap:16px;
+    padding: 5px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    
 }
 
 button{
-    margin: 10px;
+    /* margin: 7px; */
     height: 60px;
     width: 60px;
     font-family: 'roboto';
@@ -34,4 +54,55 @@ button{
     border-radius: 30px;
     font-size: 20px;
     color: aliceblue;
+}
+
+#ac{
+    background: red;
+}
+
+#brackets{
+    background: blue;
+}
+#equal{
+    font-size: 40px;
+    color: darkgreen;;
+    background: lightgreen;
+}
+#add{
+    font-size: 35px;
+    color: darkgreen;;
+    background: burlywood;
+}
+
+#sub{
+    font-size: 40px;
+    color: darkgreen;;
+    background: burlywood;
+}
+
+#multi{
+    font-size: 25px;
+    font-weight: 420;
+    color: darkgreen;;
+    background: burlywood;
+}
+
+#devide{
+    font-size: 30px;
+    font-weight: 500;
+    color: darkgreen;;
+    background: burlywood;
+}
+#percent{
+    font-size: 30px;
+    font-weight: 500;
+    color: darkgreen;;
+    background: burlywood;
+}
+
+#del{
+    font-size: 20px;
+    font-weight: 500;
+    color:  lightsalmon;
+    background:yellow;
 }

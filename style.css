@@ -24,10 +24,21 @@ body{
 }
 
 .display{
+    display: flex;
     width: 300px;
     flex: 1;
     background: hsl(100, 0%, 10%);
     border-radius: 30px;
+    color: #ededed;
+    font-size: 50px;
+    justify-content: flex-end;
+    
+}
+
+.val{
+    align-self: flex-end;
+    text-align: right;
+    padding: 10px;
 }
 
 .keys{

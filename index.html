@@ -10,28 +10,29 @@
     <div class="content">
         <div class="frame">
             <div class="display">
+                <div class="val"></div>
             </div>
             <div class="keys">
-                <button id="ac">AC</button>
+                <button id="ac" onclick="allclear()">AC</button>
                 <button id="brackets">( )</button>
-                <button id="percent">%</button>
-                <button id="devide">/</button>
-                <button id="seven">7</button>
-                <button id="eight">8</button>
-                <button id="nine">9</button>
-                <button id="multi">X</button>
-                <button id="four">4</button>
-                <button id="five">5</button>
-                <button id="six">6</button>
-                <button id="sub">-</button>
-                <button id="one">1</button>
-                <button id="two">2</button>
-                <button id="three">3</button>
-                <button id="add">+</button>
-                <button id="zero">0</button>
-                <button id="dot">.</button>
-                <button id="del">Del.</button>
-                <button id="equal">=</button>
+                <button id="percent"onclick="concat('%')">%</button>
+                <button id="devide"onclick="concat('/')">/</button>
+                <button id="seven" onclick="concat(7)">7</button>
+                <button id="eight" onclick="concat(8)">8</button>
+                <button id="nine" onclick="concat(9)">9</button>
+                <button id="multi" onclick="concat('*')">X</button>
+                <button id="four" onclick="concat(4)">4</button>
+                <button id="five" onclick="concat(5)">5</button>
+                <button id="six" onclick="concat(6)">6</button>
+                <button id="sub" onclick="concat('-')">-</button>
+                <button id="one" onclick="concat(1)">1</button>
+                <button id="two" onclick="concat(2)">2</button>
+                <button id="three" onclick="concat(3)">3</button>
+                <button id="add" onclick="concat('+')">+</button>
+                <button id="zero" onclick="concat(0)">0</button>
+                <button id="dot" onclick="concat('.')">.</button>
+                <button id="del" onclick="del()">Del.</button>
+                <button id="equal" onclick="equal()">=</button>
             </div>
         </div>
     </div>

@@ -37,26 +37,35 @@ const stack = new Stack();
 let res = "123+123";
 let a = [];
 let cur = "";
+let dotflag = 0;
 function concat(e){
     // console.log(e,cur);
     if(e=='*'||e=='-'||e=='+'||e=='/'||e=='%'){
         if(cur=='*'||cur=='-'||cur=='+'||cur=='/'||cur=='%'){
+            console.log(e);
             a.pop();
             a.push(e);
             cur = e;
             disp.innerHTML = a.join("");
         }
         else if(cur!==''){
+            dotflag = 0;
             cur = e;
             a.push(e);
             disp.innerHTML = a.join("");
         }
     }
     else{
-        // console.log('heasdf');
-        cur = e;
-        a.push(e);
-        disp.innerHTML = a.join("");
+        if(cur=='.'&&e=='.'||dotflag==1&&e=='.'){
+            disp.innerHTML = a.join("");
+            dotflag = 1;
+        }
+        else{
+            cur = e;
+            a.push(e);
+            disp.innerHTML = a.join("");
+        }
+        
     }
     
 }

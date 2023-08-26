@@ -24,7 +24,8 @@ body{
 }
 
 .display{
-    display: flex;
+    display: flex; 
+    flex-direction: column;
     width: 300px;
     flex: 1;
     background: hsl(100, 0%, 10%);
@@ -33,12 +34,15 @@ body{
     font-size: 50px;
     justify-content: flex-end;
     
+    
 }
 
 .val{
-    align-self: flex-end;
+    /* align-self: flex-end; */
     text-align: right;
     padding: 10px;
+    word-wrap: break-word;
+    font-size: 50px;
 }
 
 .keys{
@@ -65,30 +69,51 @@ button{
     border-radius: 30px;
     font-size: 20px;
     color: aliceblue;
+    transition: 0.2s;
+}
+
+button:active{
+    background-color: gray;
 }
 
 #ac{
     background: red;
 }
+#ac:active{
+    background: lightcoral;
+}
 
 #brackets{
     background: blue;
 }
+#brackets:active{
+    background: lightblue;
+}
+
 #equal{
     font-size: 40px;
     color: darkgreen;;
     background: lightgreen;
+}
+#equal:active{    
+    background: green;
 }
 #add{
     font-size: 35px;
     color: darkgreen;;
     background: burlywood;
 }
+#add:active{
+    background:salmon;
+}
 
 #sub{
     font-size: 40px;
     color: darkgreen;;
     background: burlywood;
+}
+#sub:active{
+    background:salmon;
 }
 
 #multi{
@@ -97,6 +122,9 @@ button{
     color: darkgreen;;
     background: burlywood;
 }
+#multi:active{
+    background:salmon;
+}
 
 #devide{
     font-size: 30px;
@@ -104,11 +132,17 @@ button{
     color: darkgreen;;
     background: burlywood;
 }
+#devide:active{
+    background:salmon;
+}
 #percent{
     font-size: 30px;
     font-weight: 500;
     color: darkgreen;;
     background: burlywood;
+}
+#percent:active{
+    background:salmon;
 }
 
 #del{

@@ -33,13 +33,12 @@ class Stack {
   }
 
 const disp = document.querySelector('.val');
+const res = document.querySelector('.res');
 const stack = new Stack();
-let res = "123+123";
 let a = [];
 let cur = "";
 let dotflag = 0;
 function concat(e){
-    // console.log(e,cur);
     if(e=='*'||e=='-'||e=='+'||e=='/'||e=='%'){
         if(cur=='*'||cur=='-'||cur=='+'||cur=='/'||cur=='%'){
             console.log(e);
@@ -65,9 +64,12 @@ function concat(e){
             a.push(e);
             disp.innerHTML = a.join("");
         }
-        
     }
-    
+    try{
+        equal();
+    }
+    catch(e){
+    }
 }
 
 function allclear(){
@@ -75,6 +77,7 @@ function allclear(){
     a = [];
     cur = "";
     disp.innerHTML="";
+    res.innerHTML ="";
 }
 
 function del(){
@@ -95,16 +98,36 @@ function del(){
         cur = a[a.length-1];
     }
     disp.innerHTML = a.join("");
+    try{
+        equal();
+    }
+    catch(e){}
+    
 }
 
 function equal(){
     let s = a.join("");
+    let temp = s;
     let result = eval(s);
     s = result.toString();
-    // console.log(s);
-    a = Array.from(s);
-    // console.log(a);
-    disp.innerHTML = result;
+    disp.innerHTML = temp;
+    res.innerHTML = result;
+}
+
+function e(){
+    let s = a.join("");
+    let temp = s;
+    let result;
+    try{
+        result = eval(s);
+        s = result.toString();
+        a = Array.from(s);
+        disp.innerHTML = result;
+        res.innerHTML = "";
+    }
+    catch(e){
+        console.log(e);
+    }
 }
 
 function brakets(){
